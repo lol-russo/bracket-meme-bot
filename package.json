@@ -7,6 +7,10 @@
     "name": "Jack Lo Russo",
     "email": "jack.lorusso@gmail.com"
   },
+  "main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
   "repository": {
     "type": "git",
     "url": "git://github.com/lol-russo/helvetica-ampersand-bot.git"
@@ -29,12 +33,8 @@
     "request": "~2.44.0",
     "rita": "^1.3.11",
     "twit": "~1.1.19",
-    "wordfilter": "*"
-  },
-  "devDependencies": {
-    "grunt-contrib-jshint": "~0.11.0",
-    "grunt-contrib-watch": "~0.6.0",
-    "grunt-notify": "~0.4.0"
+    "wordfilter": "*",
+    "express": "^4.16.3"
   },
   "keywords": []
 }
