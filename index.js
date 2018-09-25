@@ -75,12 +75,12 @@ function generate() {
 
 let colorSchemes = [
   { bg: "#ffffff", fg: "#181818" },
-  { bg: "#000000", fg: "#ffffff" },
+  { bg: "#181818", fg: "#ffffff" },
   { bg: "#1899d5", fg: "#ffffff" },
   { bg: "#f76720", fg: "#ffffff" },
   { bg: "#de3d83", fg: "#ffffff" },
   { bg: "#f54123", fg: "#ffffff" },
-  { bg: "#fee94e", fg: "#fee94e" }
+  { bg: "#fee94e", fg: "#181818" }
 ];
 
 function makeImage(names, title, cb) {
