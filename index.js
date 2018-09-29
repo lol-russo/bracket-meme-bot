@@ -1,5 +1,7 @@
 var request = require("request");
 var Twit = require("twit");
+var express = require("express");
+var app = express();
 var T = new Twit(require("./config.js"));
 var wordfilter = require("wordfilter");
 var rita = require("rita");
@@ -10,6 +12,8 @@ var Canvas = require("canvas");
 var canvas = new Canvas(width, height);
 var ctx = canvas.getContext("2d");
 var fs = require("fs");
+
+app.use(express.static("public"));
 
 Array.prototype.pick = function() {
   return this[Math.floor(Math.random() * this.length)];
@@ -132,5 +136,8 @@ function tweet() {
     .catch(e => console.log(e));
 }
 
-// Tweet once on initialization
-tweet();
+app.use("/tweet", tweet);
+
+var listener = app.listen(process.env.PORT, function () {
+  console.log('Your bot is running on port ' + listener.address().port);
+});
